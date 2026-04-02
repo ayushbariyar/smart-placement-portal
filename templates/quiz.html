@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aptitude Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Aptitude Quiz</h2>
+
+        <form method="POST">
+
+            <p>2 + 2 = ?</p>
+            <label><input type="radio" name="question0" value="3"> 3</label><br>
+            <label><input type="radio" name="question0" value="4"> 4</label><br>
+            <label><input type="radio" name="question0" value="5"> 5</label><br>
+
+            <p>5 * 3 = ?</p>
+            <label><input type="radio" name="question1" value="15"> 15</label><br>
+            <label><input type="radio" name="question1" value="10"> 10</label><br>
+            <label><input type="radio" name="question1" value="20"> 20</label><br>
+
+            <p>10 / 2 = ?</p>
+            <label><input type="radio" name="question2" value="2"> 2</label><br>
+            <label><input type="radio" name="question2" value="5"> 5</label><br>
+            <label><input type="radio" name="question2" value="8"> 8</label><br>
+
+            <button type="submit">Submit Quiz</button>
+
+        {% if score is not none %}
+        <h3>Your Score: {{ score }}/3 🎯</h3>
+        <div class="quiz-buttons">
+            <a href="/quiz">🔄 Retake Quiz</a>
+            <a href="/dashboard">⬅ Return to Dashboard</a>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

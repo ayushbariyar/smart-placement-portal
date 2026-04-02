@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+            <h2>Placement Portal</h2>
+            <a href="/dashboard">🏠 Dashboard</a>
+            <a href="/quiz">🧠 Aptitude Quiz</a>
+            <a href="/">🚪 Logout</a>
+        </div>
+
+        <div class="main-content">
+            <h1>Welcome to Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Last Score</h3>
+                    <p>{{ score }}</p>
+                </div>
+
+                <div class="card">
+                    <h3>Quiz Module</h3>
+                    <p>Practice aptitude daily</p>
+                </div>
+
+                <div class="card">
+                    <h3>Progress</h3>
+                    <p>Keep improving 🚀</p>
+                </div>
+            </div>
+
+            <a class="start-btn" href="/quiz">Start Quiz</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
